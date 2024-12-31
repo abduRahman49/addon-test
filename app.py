@@ -36,9 +36,10 @@ def debit_rejet():
 @app.route("/transferts/credits/new", methods=['POST'])
 def credit_reservation():
     return jsonify({
-        "ok": True,
-        "code_retour": "ACSP",
-        "ref_transaction_participant": uuid4()
+        "ok": False,
+        "code_retour": "RJCT",
+        "message_retour": "AM21",
+        # "ref_transaction_participant": uuid4()
     })
 
 
