@@ -8,8 +8,9 @@ app = Flask(__name__)
 @app.route("/transferts/debits/new", methods=['POST'])
 def debit_reservation():
     return jsonify({
-        "ok": True,
-        "code_retour": "ACSP",
+        "ok": False,
+        "code_retour": "RJCT",
+        "messageçretour": "AM21",
         "ref_transaction_participant": uuid4()
     })
 
