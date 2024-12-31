@@ -10,7 +10,7 @@ def debit_reservation():
     return jsonify({
         "ok": False,
         "code_retour": "RJCT",
-        "messageçretour": "AM21",
+        "message_retour": "AM21",
         "ref_transaction_participant": uuid4()
     })
 
