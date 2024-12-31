@@ -11,7 +11,7 @@ def debit_reservation():
         "ok": False,
         "code_retour": "RJCT",
         "message_retour": "AM21",
-        "ref_transaction_participant": uuid4()
+        # "ref_transaction_participant": uuid4()
     })
 
 
