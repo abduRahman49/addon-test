@@ -8,10 +8,9 @@ app = Flask(__name__)
 @app.route("/transferts/debits/new", methods=['POST'])
 def debit_reservation():
     return jsonify({
-        "ok": False,
-        "code_retour": "RJCT",
-        "message_retour": "AM21",
-        # "ref_transaction_participant": uuid4()
+        "ok": True,
+        "code_retour": "ACSP",
+        "ref_transaction_participant": uuid4()
     })
 
 
@@ -36,10 +35,9 @@ def debit_rejet():
 @app.route("/transferts/credits/new", methods=['POST'])
 def credit_reservation():
     return jsonify({
-        "ok": False,
-        "code_retour": "RJCT",
-        "message_retour": "AM21",
-        # "ref_transaction_participant": uuid4()
+        "ok": True,
+        "code_retour": "ACSP",
+        "ref_transaction_participant": uuid4()
     })
 
 
@@ -66,31 +64,24 @@ def get_kyc():
     return jsonify({
         "resultat_verification": True,
         "raison_rejet": "",
-        "compte_client": "compte_5",
+        "compte_client": "562422",
         "type_compte": "CACC",
         "date_ouverture": "2024-01-30",
-        "nom_client": "Dr. Justin Carroll",
+        "nom_client": "WEBART",
         "nationalite": "CL",
-        "denomination_sociale": "",
-        "raison_sociale": "",
-        "genre": "F",
+        "denomination_sociale": "WEBART",
+        "raison_sociale": "WEBART",
+        # "genre": "F",
         "telephone": "+221604908553",
         "ville_client": "West Kennethhaven",
         "adresse_complete": "PSC 9071, Box 3548 APO AA 26487",
         "numero_identification": "042-54-0792",
-        "systeme_identification": "NIDN",
-        "date_naissance": "1978-04-16",
-        "ville_naissance": "Port Stephanie",
-        "pays_naissance": "GW",
+        "systeme_identification": "TXID",
+        # "date_naissance": "1978-04-16",
+        # "ville_naissance": "Port Stephanie",
+        # "pays_naissance": "GW",
         "pays_residence": "NE",
         "devise": "XOF",
-        "type_client": "C",
+        "type_client": "B",
         "photo": "string"
     })
-
-# bulk: ESNB00320241226112304mfyMEmcx1Wjid7
-# ESNB00320241226112743CTQaDHirzntuZj
- 
- 
-# ESNB003202412261126114Bysuf8DLMlS5A
- 
